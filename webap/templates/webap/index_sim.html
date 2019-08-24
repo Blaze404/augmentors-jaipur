@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- FoxSolutions -->
+  {% load static %}
+  <title>Augmentors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'webap/css/main.css' %}">
+  <link href="{% static 'webap/css/fontawesome-free-5.8.2-web/css/all.css' %}" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $(".cancel").click(function(){
+    $(".form-popup").slideUp();
+  });
+  $(".open-button").click(function(){
+    $(".form-popup").slideDown();
+  });
+  $(".cancelbtn").click(function(){
+    $(".form-popup-2").slideUp();
+  });
+  $(".open-button-2").click(function(){
+    $(".form-popup-2").slideDown();
+  });
+});
+</script>
+  <script src="{% static 'webap/js/parallax.js-1.5.0/parallax.js' %}"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style>
+  </style>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div class="imgwrapped"  data-parallax="scroll" data-image-src="{% static 'webap/img/FoxyBcg.jpg' %}">
+  <div class="parallax-window" ></div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="{% static 'webap/img/FOX_LOGO.png' %}"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#login">LOGIN</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <br><br>
+  <h3>The <span>SMART METER</span> providing ultimate <span> CUSTOMER SATISFACTION</span></h3>
+  <br>
+  <h4>Powered by Data Analytics!</h4>
+
+</div>
+</div>
+<!-- Container (About Section) -->
+<div id="about" class="imgwrapped container-fluid"  data-parallax="scroll" data-image-src="{% static 'webap/img/FOXBCG.png' %}">
+<div class="container">
+  <div class="row container-fluid">
+    <div class="col-sm-12 text-center">
+      <h2>Smart Meter Data Analysis</h2><br>
+      <h4>Our team has tried to deliver what works best.</h4>
+      <p>We delved deep in to understand the nicety of your requirements.</p><p>After thorough analysis of your specifications we have designed this business model integrated with power of analysis and created this prototype for executing our idea!</p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Container (Services Section) -->
+<div class="imgwrapped container-fluid"  data-parallax="scroll" data-image-src="{% static 'webap/img/Foxy2.jpg' %}">
+<div id="services">
+<div class="container-fluid text-center services">
+  <h2 style="color: #fff">SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="logo-small"><i class="fab fa-uikit"></i></span>
+      <h4>UI/UX</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="logo-small"><i class="fas fa-copyright"></i></span>
+      <h4>BRAND DESIGN</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="logo-small"><i class="fas fa-blog"></i></span>
+      <h4>WEB DESIGN</h4>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="logo-small"><i class="fas fa-cash-register"></i></span>
+      <h4>E-COMMERCE</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="logo-small"><i class="fas fa-mobile"></i></span>
+      <h4>MOBILE APP</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="logo-small"><i class="fas fa-comments-dollar"></i></span>
+      <h4>DIGITAL MARKETING</h4>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Container (Work Section) -->
+<div id="login" class="container-fluid-1 text-center">
+  <h1 id="log" style="color: #fff;">Login as</h1><br>
+  <div class="row text-center slideanim slide">
+    <div class="col-sm-4" style="margin-left: 15%;">
+     <div class="flip-card" style="float: right;">
+      <div class="flip-card-inner-1">
+        <div class="flip-card-front-1">
+          <img src="{% static 'webap/img/clipart1.jpg' %}" alt="Avatar" style="width: 60%;height: 70%;">
+          <h3>Utility Station</h3>
+        </div>
+        <div class="flip-card-back-1">
+          <form action="" method="POST" style="padding-top: 5%;">
+            {% csrf_token %}
+            <div class="container-fluid-1">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required="">
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required="">
+                <button type="submit" id = "">Login</button>
+            </div>
+
+            <div class="holder">
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="flip-card" style="float: left;">
+        <div class="flip-card-inner-2">
+          <div class="flip-card-front-2">
+            <img src="{% static 'webap/img/clipart2.png' %}" alt="Avatar" style="width: 40%;height: 70%;">
+            <h3>User</h3>
+          </div>
+          <div class="flip-card-back-2">
+            <form action="" method="POST" style="padding-top: 5%;">
+              {% csrf_token %}
+            <div class="container-fluid-1">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required="">
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required="">
+                  
+              <button type="submit" id="loginid">Login</button>
+            </div>
+
+            <div class="holder">
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div></div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="imgwrapped container-fluid"  data-parallax="scroll" data-image-src="{% static 'webap/img/FOXBCG.png' %}">
+<div class="container-fluid">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5" style="text-align: right;">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Aurangabad, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 8208685036</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> augmentors@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Designed by team <a href="" title="We are Augmentors">Augmentors</a></p>
+</footer>
+<script type="text/javascript" src="{% static 'webap/js/main.js' %}">//scrolling script included</script>
+<script type="text/javascript" src="{% static 'webap/js/navbar.js' %}">//Color transformation of the navbar</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<<form class="myForm" id="theForm"  method="POST" action="" >
+    {% csrf_token %}
+    <input type="text" name="sample" >
+    <button type="submit" id="butt">Submit</button>
+</form>
+
+<script>
+    $(document).on('submit', '.myForm', function(e) {
+     $.ajax({
+        url: $(this).attr('action'),
+        type: $(this).attr('method'),
+        data: $(this).serialize(),
+
+    });
+    e.preventDefault();
+});
+</script>
+
+</body>
+</html>
